@@ -1,4 +1,4 @@
-!pip install --upgrade pip
+pip install --upgrade pip
 
 # Import the Streamlit library
 import streamlit as st
