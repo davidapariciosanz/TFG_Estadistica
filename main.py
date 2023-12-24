@@ -81,11 +81,6 @@ as_str = {
     "yAxis": {
         "title": {
             "text": 'Número de estudiantes'
-        },
-        "labels": {
-            "formatter": function () {
-                return this.value + '';
-            }
         }
     },
     "tooltip": {
