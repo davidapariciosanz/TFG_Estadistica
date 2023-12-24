@@ -1,5 +1,3 @@
-pip install --upgrade pip
-
 # Import the Streamlit library
 import streamlit as st
 from highcharts_core.chart import Chart
