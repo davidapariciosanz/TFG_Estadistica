@@ -92,14 +92,15 @@ as_str = {
             "marker": {
                 "radius": 4,
                 "lineColor": '#666666',
-                "lineWidth": 1
+                "lineWidth": 1,
+                "enable":false
             }
         }
     },
     "series": [
         {"type":"spline",
          "name": 'Grado en Administración y Dirección de Empresas',
-         "data": [365., 322., 330., 332., 360., 346.]},
+         "data": [65., 322., 330., 332., 360., 346.]},
         {"type":"spline",
          "name": 'Grado en Pruebaa',
          "data": [15., 32., 370., 32., 30., 46.]}
