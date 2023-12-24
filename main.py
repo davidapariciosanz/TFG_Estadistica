@@ -109,3 +109,26 @@ as_str = {
 
 
 hg.streamlit_highcharts(as_str, 640)
+
+
+as_str = {
+    "xAxis": {
+        "categories": ["2017-18", "2018-19", "2019-20", "2020-21", "2021-22", "2022-23"],
+    },
+    "yAxis": {
+        "title": {
+            "text": 'Número de estudiantes'
+        }
+    },
+    "series": [
+        {"type":"spline",
+         "name": 'Grado en Administración y Dirección de Empresas',
+         "data": [65., 322., 330., 332., 360., 346.]},
+        {"type":"spline",
+         "name": 'Grado en Pruebaa',
+         "data": [15., 32., 370., 32., 30., 46.]}
+    ]
+}
+
+
+hg.streamlit_highcharts(as_str, 640)
