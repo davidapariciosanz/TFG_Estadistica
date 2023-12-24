@@ -102,7 +102,7 @@ as_str = {
             "symbol": 'square'
         },
         "data": [365., 322., 330., 332., 360., 346.]
-    },
+    }],
     "series": [{
         "name": 'Grado en Pruebaa',
         "marker": {
