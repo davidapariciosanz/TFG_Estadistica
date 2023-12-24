@@ -97,9 +97,12 @@ as_str = {
         }
     },
     "series": [
-        {"type":"column",
-         "name":"2020",
-         "data":[59,83]}    
+        {"type":"spline",
+         "name": 'Grado en Administración y Dirección de Empresas',
+         "data": [365., 322., 330., 332., 360., 346.]},
+        {"type":"spline",
+         "name": 'Grado en Pruebaa',
+         "data": [15., 32., 370., 32., 30., 46.]}
     ]
 }
 
