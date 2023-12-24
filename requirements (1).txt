@@ -1,8 +1,0 @@
-plotly
-openrouteservice 
-streamlit_card
-streamlit_extras
-folium
-streamlit_folium
-streamlit-folium
-shapely
