@@ -70,7 +70,7 @@ as_str = {
         "text": "Número de estudiantes por titulación"
     },
     "subtitle": {
-        text: 'Fuente: <a href="https://www.universidata.es/" target="_blank">UniversiDATA.es</a>'
+        "text": 'Fuente: <a href="https://www.universidata.es/" target="_blank">UniversiDATA.es</a>'
     },
     "xAxis": {
         "categories": ["2017-18", "2018-19", "2019-20", "2020-21", "2021-22", "2022-23"],
