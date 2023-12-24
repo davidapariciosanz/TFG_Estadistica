@@ -102,6 +102,13 @@ as_str = {
             "symbol": 'square'
         },
         "data": [365., 322., 330., 332., 360., 346.]
+    },
+    "series": [{
+        "name": 'Grado en Pruebaa',
+        "marker": {
+            "symbol": 'square'
+        },
+        "data": [15., 32., 370., 32., 30., 46.]
     }]
 }
 
