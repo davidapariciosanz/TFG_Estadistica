@@ -39,6 +39,7 @@ chart_def = {
     ]
 }
 
-hct.streamlit_highcharts(chart_def, 640)
+chart = Chart.from_options(chart_def)
+chart
 
 
