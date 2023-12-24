@@ -120,12 +120,19 @@ as_str = {
             "text": 'Número de estudiantes'
         }
     },
+    "plotOptions": {
+        "spline": {
+            "marker": {
+                "enable": False
+            }
+        }
+    },
     "series": [
         {"type":"spline",
-         "name": 'Grado en Administración y Dirección de Empresas',
+         "name": 'Grado en Administración y Dirección de Empresasss',
          "data": [65., 322., 330., 332., 360., 346.]},
         {"type":"spline",
-         "name": 'Grado en Pruebaa',
+         "name": 'Grado ennn',
          "data": [15., 32., 370., 32., 30., 46.]}
     ]
 }
