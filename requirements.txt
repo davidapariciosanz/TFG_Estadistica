@@ -1,2 +1,2 @@
 streamlit
-highcharts-core
+streamlit-highcharts==0.1.5
