@@ -1,6 +1,6 @@
 # Import the Streamlit library
 import streamlit as st
-import streamlit_highcharts as hct
+from highcharts_core.chart import Chart
 
 # Set the title of the app
 st.title("My Streamlit App")
