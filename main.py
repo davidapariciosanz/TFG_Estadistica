@@ -96,20 +96,11 @@ as_str = {
             }
         }
     },
-    "series": [{
-        "name": 'Grado en Administración y Dirección de Empresas',
-        "marker": {
-            "symbol": 'square'
-        },
-        "data": [365., 322., 330., 332., 360., 346.]
-    }],
-    "series": [{
-        "name": 'Grado en Pruebaa',
-        "marker": {
-            "symbol": 'square'
-        },
-        "data": [15., 32., 370., 32., 30., 46.]
-    }]
+    "series": [
+        {"type":"column",
+         "name":"2020",
+         "data":[59,83]}    
+    ]
 }
 
 
