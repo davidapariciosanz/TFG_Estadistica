@@ -112,30 +112,81 @@ hg.streamlit_highcharts(as_str, 640)
 
 
 as_str = {
-    "xAxis": {
-        "categories": ["2017-18", "2018-19", "2019-20", "2020-21", "2021-22", "2022-23"],
-    },
-    "yAxis": {
-        "title": {
-            "text": 'Número de estudiantes'
-        }
-    },
-    "plotOptions": {
-        "spline": {
-            "marker": {
-                "enable": False
-            }
-        }
-    },
-    "series": [
-        {"type":"spline",
-         "name": 'Grado en Administración y Dirección de Empresasss',
-         "data": [65., 322., 330., 332., 360., 346.]},
-        {"type":"spline",
-         "name": 'Grado ennn',
-         "data": [15., 32., 370., 32., 30., 46.]}
-    ]
-}
+   "chart":{
+      "type":"line"
+   },
+   "title":{
+      "text":"Monthly Average Temperature"
+   },
+   "subtitle":{
+      "text":"Source: ""+""<a href=\"https://en.wikipedia.org/wiki/List_of_cities_by_average_temperature\" ""+""target=\"_blank\">Wikipedia.com</a>"
+   },
+   "xAxis":{
+      "categories":[
+         "Jan",
+         "Feb",
+         "Mar",
+         "Apr",
+         "May",
+         "Jun",
+         "Jul",
+         "Aug",
+         "Sep",
+         "Oct",
+         "Nov",
+         "Dec"
+      ]
+   },
+   "yAxis":{
+      "title":{
+         "text":"Temperature (°C)"
+      }
+   },
+   "plotOptions":{
+      "line":{
+         "dataLabels":{
+            "enabled": True
+         },
+         "enableMouseTracking": False
+      }
+   },
+   "series":[
+      {
+         "name":"Reggane",
+         "data":[
+            16.0,
+            18.2,
+            23.1,
+            27.9,
+            32.2,
+            36.4,
+            39.8,
+            38.4,
+            35.5,
+            29.2,
+            22.0,
+            17.8
+         ]
+      },
+      {
+         "name":"Tallinn",
+         "data":[
+            -2.9,
+            -3.6,
+            -0.6,
+            4.8,
+            10.2,
+            14.5,
+            17.6,
+            16.5,
+            12.0,
+            6.5,
+            2.0,
+            -0.9
+         ]
+      }
+   ]
+});
 
 
 hg.streamlit_highcharts(as_str, 640)
