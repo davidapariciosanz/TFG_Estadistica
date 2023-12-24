@@ -147,7 +147,7 @@ as_str = {
          "dataLabels":{
             "enabled": True
          },
-         "enableMouseTracking": False
+         "enableMouseTracking": True
       }
    },
    "series":[
