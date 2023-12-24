@@ -1,5 +1,4 @@
 streamlit
 streamlit_highcharts
-highcharts_core
-streamlit-highcharts
 highcharts-core
+
