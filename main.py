@@ -110,4 +110,6 @@ as_str = {
     }]
 }
 
+as_str = as_str % [365., 322., 330., 332., 360., 346.]
+
 hg.streamlit_highcharts(as_str, 640)
