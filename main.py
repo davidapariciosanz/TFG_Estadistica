@@ -186,7 +186,7 @@ as_str = {
          ]
       }
    ]
-});
+}
 
 
 hg.streamlit_highcharts(as_str, 640)
