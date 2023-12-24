@@ -56,3 +56,58 @@ chart_def = {
 }
 
 hg.streamlit_highcharts(chart_def, 640)
+
+
+
+as_str = {
+    "chart": {
+        "type": "spline"
+    },
+    "credits": {
+        "enabled": False
+    },
+    "title": {
+        "text": "Número de estudiantes por titulación"
+    },
+    "subtitle": {
+        text: 'Fuente: <a href="https://www.universidata.es/" target="_blank">UniversiDATA.es</a>'
+    },
+    "xAxis": {
+        "categories": ["2017-18", "2018-19", "2019-20", "2020-21", "2021-22", "2022-23"],
+        "accessibility": {
+            "description": 'Months of the year'
+        }
+    },
+    "yAxis": {
+        "title": {
+            "text": 'Número de estudiantes'
+        },
+        "labels": {
+            "formatter": function () {
+                return this.value + '';
+            }
+        }
+    },
+    "tooltip": {
+        "crosshairs": True,
+        "shared": True
+    },
+    "plotOptions": {
+        "spline": {
+            "marker": {
+                "radius": 4,
+                "lineColor": '#666666',
+                "lineWidth": 1
+            }
+        }
+    },
+    "series": [{
+        "name": 'Grado en Administración y Dirección de Empresas',
+        "marker": {
+            "symbol": 'square'
+        },
+        "data": %s
+    }]
+}
+
+hg.streamlit_highcharts(as_str, 640)
