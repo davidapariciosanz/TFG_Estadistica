@@ -33,7 +33,13 @@ df_degrees_counts = pd.read_csv(os.path.join(PATH_CDATA, 'df_degrees_counts.csv'
 st.title("D.A.S.")
 opciones_predeterminadas = ["Grado en Estadística", 'Grado en Física', 'Grado en Matemáticas']
 degrees = st.multiselect('Selecciona las opciones:', all_degrees, default=opciones_predeterminadas)
-selected_type = st.selectbox('Selecciona un tipo:', ['spline', 'line'], default="spline")
+
+# Define the available options for the selector
+available_options = ['spline', 'line']
+# Set the default value
+default_value = 'spline'
+# Add a selector with limited options to "spline" or "line"
+selected_type = st.selectbox('Select a type:', available_options, index=available_options.index(default_value))
 
 # Lista de diccionarios vacía para almacenar las series seleccionadas
 series_dict = []
