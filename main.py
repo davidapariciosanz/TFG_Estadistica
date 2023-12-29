@@ -110,27 +110,32 @@ lista_1 = ast.literal_eval(filtered_rows[0].tolist()[0]),
 lista_2 = ast.literal_eval(filtered_rows[0].tolist()[1])
 
 plot_2 = {
+    
    "chart":{
       "type": "boxplot"
    },
+    
    "title":{
-      "text": "Highcharts Box Plot Example"
+      "text": "Distribución de las notas de admisión: " + defecto
    },
+    
    "legend":{
       "enabled":False
    },
+    
    "xAxis":{
       "categories":[
-         "1",
-         "2"
+         "2017-18",
+         "2018-19"
       ],
       "title":{
-         "text":"Experiment No."
+         "text":"Curso académico"
       }
    },
+    
    "yAxis":{
       "title":{
-         "text":"Observations"
+         "text":"Nota de admisión"
       },
       "plotLines":[
          {
@@ -138,7 +143,7 @@ plot_2 = {
             "color":"red",
             "width":1,
             "label":{
-               "text":"Theoretical mean: 932",
+               "text":"Media teórica",
                "align":"center",
                "style":{
                   "color":"gray"
@@ -147,9 +152,10 @@ plot_2 = {
          }
       ]
    },
+    
    "series":[
       {
-         "name":"Observations",
+         "name":"Estadísticos",
          "data":[
              [
                  np.min(lista_1),
