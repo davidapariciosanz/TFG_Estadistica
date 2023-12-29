@@ -263,7 +263,7 @@ plot_3 = {
             "parentNodeLimit":True
          },
          "dataLabels":{
-            "enabled":true,
+            "enabled":True,
             "format":"{point.name}",
             "filter":{
                "property":"y",
