@@ -33,6 +33,27 @@ df_degrees_counts = pd.read_csv(os.path.join(PATH_CDATA, 'df_degrees_counts.csv'
 
 st.title("D.A.S.")
 degrees = st.multiselect('Selecciona las opciones:', all_degrees)
+
+# Lista de diccionarios vacía para almacenar las series seleccionadas
+series_dict = []
+
+# Generar la lista de diccionarios basada en las opciones seleccionadas
+for opcion in opciones_seleccionadas:
+    
+    data = df_degrees_counts.loc[df_degrees_counts["Titulacion"] == opcion].drop(columns=["Titulacion"]).values.tolist()[0]
+    
+    serie = {
+        "type": "spline",
+        "name": opcion,
+        "data": data
+    }
+    
+    series_dict.append(serie)
+
+# Mostrar la lista de diccionarios generada
+st.write('Lista de diccionarios generada:', series_dict)
+
+
 aux = st.selectbox('Select an option:', [0, 1])
 
 if aux == 0:
