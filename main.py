@@ -120,11 +120,11 @@ plot_2 = {
    },
     
    "legend":{
-      "enabled":False
+      "enabled": False
    },
 
-    exporting: {
-        enabled: False
+    "exporting": {
+        "enabled": False
     },
     
    "xAxis":{
