@@ -21,6 +21,7 @@ import ast
 import os
 import pandas as pd
 import pickle
+import numpy as np
 
 UNIVERSITY = "uva"
 PATH_CDATA = './cdata/' + UNIVERSITY
@@ -105,6 +106,8 @@ hg.streamlit_highcharts(as_str, 640)
 defecto = "Grado en Estadística"
 filtered_rows = df_degrees_list.loc[df_degrees_list["Titulacion"] == defecto].drop(columns=["Titulacion"]).values
 
+lista_1 = ast.literal_eval(filtered_rows[0].tolist()[0]),
+lista_2 = ast.literal_eval(filtered_rows[0].tolist()[1])
 
 plot_2 = {
    "chart":{
@@ -148,8 +151,20 @@ plot_2 = {
       {
          "name":"Observations",
          "data":[
-            ast.literal_eval(filtered_rows[0].tolist()[0]),
-            ast.literal_eval(filtered_rows[0].tolist()[1])
+             [
+                 np.min(lista_1),
+                 np.percentile(lista_1, 25),
+                 np.median(lista_1)
+                 np.percentile(lista_1, 75),
+                 np.max(lista_1)
+             ],
+             [
+                 np.min(lista_2),
+                 np.percentile(lista_2, 25),
+                 np.median(lista_2)
+                 np.percentile(lista_2, 75),
+                 np.max(lista_2)
+             ]
          ]
       },
       {
