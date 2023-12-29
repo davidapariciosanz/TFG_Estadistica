@@ -28,6 +28,7 @@ with open(os.path.join(PATH_CDATA, 'all_degrees.pkl'), 'rb') as file:
     all_degrees = pickle.load(file)
 
 df_degrees_counts = pd.read_csv(os.path.join(PATH_CDATA, 'df_degrees_counts.csv'), encoding='latin1')
+df_degrees_list = pd.read_csv(os.path.join(PATH_CDATA, 'df_degrees_list.csv'), encoding='latin1')
 
 
 st.title("D.A.S.")
@@ -100,6 +101,9 @@ as_str = {
 
 hg.streamlit_highcharts(as_str, 640)
 
+defecto = "Grado en Estadística"
+filtered_rows = df_degrees_list.loc[df_degrees_list["Titulacion"] == defecto].drop(columns=["Titulacion"]).values
+
 
 plot_2 = {
    "chart":{
@@ -146,20 +150,8 @@ plot_2 = {
       {
          "name":"Observations",
          "data":[
-            [
-               760,
-               801,
-               848,
-               895,
-               965
-            ],
-            [
-               733,
-               853,
-               939,
-               980,
-               1080
-            ],
+            ast.literal_eval(filtered_rows[0].tolist()[0]),
+            ast.literal_eval(filtered_rows[0].tolist()[1]),
             [
                714,
                762,
