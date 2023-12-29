@@ -33,6 +33,7 @@ df_degrees_counts = pd.read_csv(os.path.join(PATH_CDATA, 'df_degrees_counts.csv'
 st.title("D.A.S.")
 opciones_predeterminadas = ["Grado en Estadística", 'Grado en Física', 'Grado en Matemáticas']
 degrees = st.multiselect('Selecciona las opciones:', all_degrees, default=opciones_predeterminadas)
+selected_type = st.selectbox('Selecciona un tipo:', ['spline', 'line'], default="spline")
 
 # Lista de diccionarios vacía para almacenar las series seleccionadas
 series_dict = []
@@ -43,7 +44,7 @@ for degree in degrees:
     data = df_degrees_counts.loc[df_degrees_counts["Titulacion"] == degree].drop(columns=["Titulacion"]).values.tolist()[0]
     
     serie = {
-        "type": "spline",
+        "type": selected_type,
         "name": degree,
         "data": data
     }
@@ -52,7 +53,7 @@ for degree in degrees:
     
 as_str = {
     "chart": {
-        "type": "spline"
+        "type": selected_type
     },
     "credits": {
         "enabled": False
@@ -79,7 +80,7 @@ as_str = {
         "shared": True
     },
     "plotOptions": {
-        "spline": {
+        selected_type: {
             "marker": {
                 "radius": 4,
                 "lineColor": '#666666',
