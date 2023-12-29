@@ -21,8 +21,6 @@ with st.expander("Show code...",expanded=False):
 # Set the title of the app
 st.title("My Streamlit App")
 
-hg.streamlit_highcharts(chart_def, 640)
-
 aux = st.selectbox('Select an option:', [0, 1])
 
 if aux == 0:
