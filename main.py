@@ -113,6 +113,9 @@ filtered_rows = df_degrees_list.loc[df_degrees_list["Titulacion"] == defecto].dr
 
 lista_1 = ast.literal_eval(filtered_rows[0].tolist()[0]),
 lista_2 = ast.literal_eval(filtered_rows[0].tolist()[1])
+lista_3 = ast.literal_eval(filtered_rows[0].tolist()[2])
+lista_4 = ast.literal_eval(filtered_rows[0].tolist()[3])
+lista_5 = ast.literal_eval(filtered_rows[0].tolist()[4])
 
 plot_2 = {
     
@@ -183,6 +186,27 @@ plot_2 = {
                  np.median(lista_2),
                  np.percentile(lista_2, 75),
                  np.max(lista_2)
+             ],
+             [
+                 np.min(lista_3),
+                 np.percentile(lista_3, 25),
+                 np.median(lista_3),
+                 np.percentile(lista_3, 75),
+                 np.max(lista_3)
+             ],
+             [
+                 np.min(lista_4),
+                 np.percentile(lista_4, 25),
+                 np.median(lista_4),
+                 np.percentile(lista_4, 75),
+                 np.max(lista_4)
+             ],
+             [
+                 np.min(lista_5),
+                 np.percentile(lista_5, 25),
+                 np.median(lista_5),
+                 np.percentile(lista_5, 75),
+                 np.max(lista_5)
              ]
          ]
       },
@@ -212,3 +236,119 @@ plot_2 = {
 hg.streamlit_highcharts(plot_2, 640)
 
          
+plot_3 = {
+   "chart":{
+      "type":"packedbubble",
+      "height":"100%"
+   },
+   "title":{
+      "text":"Carbon emissions around the world (2014)",
+      "align":"left"
+   },
+   "tooltip":{
+      "useHTML": True,
+      "pointFormat":"<b>{point.name}:</b> {point.value}m CO<sub>2</sub>"
+   },
+   "plotOptions":{
+      "packedbubble":{
+         "minSize":"20%",
+         "maxSize":"100%",
+         "zMin":0,
+         "zMax":1000,
+         "layoutAlgorithm":{
+            "gravitationalConstant":0.05,
+            "splitSeries":True,
+            "seriesInteraction":False,
+            "dragBetweenSeries":True,
+            "parentNodeLimit":True
+         },
+         "dataLabels":{
+            "enabled":true,
+            "format":"{point.name}",
+            "filter":{
+               "property":"y",
+               "operator":">",
+               "value":250
+            },
+            "style":{
+               "color":"black",
+               "textOutline":"none",
+               "fontWeight":"normal"
+            }
+         }
+      }
+   },
+   "series":[
+      {
+         "name":"Europe",
+         "data":[
+            {
+               "name":"Germany",
+               "value":767.1
+            },
+            {
+               "name":"Croatia",
+               "value":20.7
+            },
+            {
+               "name":"Belgium",
+               "value":97.2
+            }
+         ]
+      },
+      {
+         "name":"Africa",
+         "data":[
+            {
+               "name":"Senegal",
+               "value":8.2
+            },
+            {
+               "name":"Cameroon",
+               "value":9.2
+            }
+         ]
+      },
+      {
+         "name":"Oceania",
+         "data":[
+            {
+               "name":"Australia",
+               "value":409.4
+            },
+            {
+               "name":"New Zealand",
+               "value":34.1
+            },
+            {
+               "name":"Papua New Guinea",
+               "value":7.1
+            }
+         ]
+      },
+      {
+         "name":"North America",
+         "data":[
+            {
+               "name":"Costa Rica",
+               "value":7.6
+            },
+            {
+               "name":"Honduras",
+               "value":8.4
+            }
+         ]
+      },
+      {
+         "name":"Asia",
+         "data":[
+            {
+               "name":"Nepal",
+               "value":6.5
+            }
+         ]
+      }
+   ]
+});
+
+hg.streamlit_highcharts(plot_3, 640)
