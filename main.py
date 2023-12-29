@@ -119,10 +119,7 @@ plot_2 = {
    "xAxis":{
       "categories":[
          "1",
-         "2",
-         "3",
-         "4",
-         "5"
+         "2"
       ],
       "title":{
          "text":"Experiment No."
@@ -152,28 +149,7 @@ plot_2 = {
          "name":"Observations",
          "data":[
             ast.literal_eval(filtered_rows[0].tolist()[0]),
-            ast.literal_eval(filtered_rows[0].tolist()[1]),
-            [
-               714,
-               762,
-               817,
-               870,
-               918
-            ],
-            [
-               724,
-               802,
-               806,
-               871,
-               950
-            ],
-            [
-               834,
-               836,
-               864,
-               882,
-               910
-            ]
+            ast.literal_eval(filtered_rows[0].tolist()[1])
          ]
       },
       {
@@ -183,19 +159,11 @@ plot_2 = {
          "data":[
             [
                0,
-               644
+               2
             ],
             [
-               4,
-               718
-            ],
-            [
-               4,
-               951
-            ],
-            [
-               4,
-               969
+               1,
+               3
             ]
          ],
          "marker":{
