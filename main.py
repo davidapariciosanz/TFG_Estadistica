@@ -38,13 +38,13 @@ degrees = st.multiselect('Selecciona las opciones:', all_degrees)
 series_dict = []
 
 # Generar la lista de diccionarios basada en las opciones seleccionadas
-for opcion in opciones_seleccionadas:
+for degree in degrees:
     
-    data = df_degrees_counts.loc[df_degrees_counts["Titulacion"] == opcion].drop(columns=["Titulacion"]).values.tolist()[0]
+    data = df_degrees_counts.loc[df_degrees_counts["Titulacion"] == degree].drop(columns=["Titulacion"]).values.tolist()[0]
     
     serie = {
         "type": "spline",
-        "name": opcion,
+        "name": degree,
         "data": data
     }
     
