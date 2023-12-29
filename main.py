@@ -154,14 +154,14 @@ plot_2 = {
              [
                  np.min(lista_1),
                  np.percentile(lista_1, 25),
-                 np.median(lista_1)
+                 np.median(lista_1),
                  np.percentile(lista_1, 75),
                  np.max(lista_1)
              ],
              [
                  np.min(lista_2),
                  np.percentile(lista_2, 25),
-                 np.median(lista_2)
+                 np.median(lista_2),
                  np.percentile(lista_2, 75),
                  np.max(lista_2)
              ]
