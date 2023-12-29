@@ -67,6 +67,11 @@ as_str = {
     "credits": {
         "enabled": False
     },
+
+    "exporting": {
+        "enabled": False
+    },
+    
     "title": {
         "text": "Número de estudiantes por titulación"
     },
@@ -123,6 +128,10 @@ plot_2 = {
       "enabled": False
    },
 
+    "credits": {
+        "enabled": False
+    },
+    
     "exporting": {
         "enabled": False
     },
