@@ -29,8 +29,10 @@ with open(os.path.join(PATH_CDATA, 'all_degrees.pkl'), 'rb') as file:
 
 df_degrees_counts = pd.read_csv(os.path.join(PATH_CDATA, 'df_degrees_counts.csv'), encoding='latin1')
 
+
 st.title("D.A.S.")
-degrees = st.multiselect('Selecciona las opciones:', all_degrees)
+opciones_predeterminadas = ["Grado en Estadística"]
+degrees = st.multiselect('Selecciona las opciones:', all_degrees, default=opciones_predeterminadas)
 
 # Lista de diccionarios vacía para almacenar las series seleccionadas
 series_dict = []
