@@ -235,7 +235,7 @@ plot_2 = {
 
 hg.streamlit_highcharts(plot_2, 640)
 
-         
+# ANTES HABÍA LEYENDA, REVISAR  
 plot_3 = {
    "chart":{
       "type":"packedbubble",
