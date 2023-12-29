@@ -280,71 +280,51 @@ plot_3 = {
    },
    "series":[
       {
-         "name":"Europe",
+         "name":"Clúster 1",
          "data":[
             {
-               "name":"Germany",
+               "name":'Grado en Matemáticas',
                "value":767.1
             },
             {
-               "name":"Croatia",
+               "name":'Grado en Medicina',
                "value":20.7
             },
             {
-               "name":"Belgium",
+               "name":'Grado en Nutrición Humana y Dietética',
                "value":97.2
             }
          ]
       },
+       
       {
-         "name":"Africa",
+         "name":"Clúster 2",
          "data":[
             {
-               "name":"Senegal",
+               "name":'Grado en Turismo',
                "value":8.2
             },
             {
-               "name":"Cameroon",
+               "name":'Grado en Traducción e Interpretación',
                "value":9.2
             }
          ]
       },
+       
       {
-         "name":"Oceania",
+         "name":"Clúster 3",
          "data":[
             {
-               "name":"Australia",
+               "name":'Grado en Fundamentos de la Arquitectura',
                "value":409.4
             },
             {
-               "name":"New Zealand",
+               "name":'Grado en Física',
                "value":34.1
             },
             {
-               "name":"Papua New Guinea",
+               "name":'Grado en Geografía y Planificación Territorial',
                "value":7.1
-            }
-         ]
-      },
-      {
-         "name":"North America",
-         "data":[
-            {
-               "name":"Costa Rica",
-               "value":7.6
-            },
-            {
-               "name":"Honduras",
-               "value":8.4
-            }
-         ]
-      },
-      {
-         "name":"Asia",
-         "data":[
-            {
-               "name":"Nepal",
-               "value":6.5
             }
          ]
       }
