@@ -122,6 +122,10 @@ plot_2 = {
    "legend":{
       "enabled":False
    },
+
+    exporting: {
+        enabled: False
+    },
     
    "xAxis":{
       "categories":[
