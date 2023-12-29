@@ -349,6 +349,6 @@ plot_3 = {
          ]
       }
    ]
-});
+}
 
 hg.streamlit_highcharts(plot_3, 640)
