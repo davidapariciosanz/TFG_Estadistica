@@ -21,43 +21,27 @@ with st.expander("Show code...",expanded=False):
 # Set the title of the app
 st.title("My Streamlit App")
 
-chart_def = {
-    "title": {
-        "text": "Sales of petroleum products March, Norway",
-        "align": "left"
-    },
-    "xAxis": {
-        "categories": ["Jet fuel", "Duty-free diesel"]
-    },
-    "yAxis": {
-        "title": {"text": "Million liter"}
-    },
-    "series": [
-        {"type": "column",
-         "name": "2020",
-         "data": [59, 83]},
-        {"type": "column",
-         "name": "2021",
-         "data": [24, 79]
-         },
-        {"type": "column",
-         "name": "2022",
-         "data": [58, 88]
-         },
-        {"type": "spline",
-         "name": "Average",
-         "data": [47, 83.33],
-         "marker": {
-             "lineWidth": 2,
-             "fillColor": "black",
-         }
-         }
-    ]
-}
-
 hg.streamlit_highcharts(chart_def, 640)
 
+aux = st.selectbox('Select an option:', [0, 1])
 
+if aux == 0:
+    series_dict = [
+        {"type": "spline",
+         "name": 'Grado en Administración y Dirección de Empresas',
+         "data": [65., 322., 330., 332., 360., 346.]},
+
+        {"type": "spline",
+         "name": 'Grado en Pruebaa',
+         "data": [15., 32., 370., 32., 30., 46.]}
+    ]
+
+else:
+    series_dict = [
+        {"type": "spline",
+         "name": 'Grado en Administración y Dirección de Empresas',
+         "data": [65., 322., 330., 332., 360., 346.]}
+    ]
 
 as_str = {
     "chart": {
@@ -97,96 +81,7 @@ as_str = {
             }
         }
     },
-    "series": [
-        {"type":"spline",
-         "name": 'Grado en Administración y Dirección de Empresas',
-         "data": [65., 322., 330., 332., 360., 346.]},
-        {"type":"spline",
-         "name": 'Grado en Pruebaa',
-         "data": [15., 32., 370., 32., 30., 46.]}
-    ]
+    "series": series_dict
 }
-
-
-hg.streamlit_highcharts(as_str, 640)
-
-
-as_str = {
-   "chart":{
-      "type":"line"
-   },
-   "title":{
-      "text":"Monthly Average Temperature"
-   },
-   "subtitle":{
-      "text":"Source: ""+""<a href=\"https://en.wikipedia.org/wiki/List_of_cities_by_average_temperature\" ""+""target=\"_blank\">Wikipedia.com</a>"
-   },
-   "xAxis":{
-      "categories":[
-         "Jan",
-         "Feb",
-         "Mar",
-         "Apr",
-         "May",
-         "Jun",
-         "Jul",
-         "Aug",
-         "Sep",
-         "Oct",
-         "Nov",
-         "Dec"
-      ]
-   },
-   "yAxis":{
-      "title":{
-         "text":"Temperature (°C)"
-      }
-   },
-   "plotOptions":{
-      "line":{
-         "dataLabels":{
-            "enabled": True
-         },
-         "enableMouseTracking": True
-      }
-   },
-   "series":[
-      {
-         "name":"Reggane",
-         "data":[
-            16.0,
-            18.2,
-            23.1,
-            27.9,
-            32.2,
-            36.4,
-            39.8,
-            38.4,
-            35.5,
-            29.2,
-            22.0,
-            17.8
-         ]
-      },
-      {
-         "name":"Tallinn",
-         "data":[
-            -2.9,
-            -3.6,
-            -0.6,
-            4.8,
-            10.2,
-            14.5,
-            17.6,
-            16.5,
-            12.0,
-            6.5,
-            2.0,
-            -0.9
-         ]
-      }
-   ]
-}
-
 
 hg.streamlit_highcharts(as_str, 640)
