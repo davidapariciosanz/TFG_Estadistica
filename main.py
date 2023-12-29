@@ -242,12 +242,12 @@ plot_3 = {
       "height":"100%"
    },
    "title":{
-      "text":"Carbon emissions around the world (2014)",
+      "text":"Análisis clúster de titulaciones",
       "align":"left"
    },
    "tooltip":{
       "useHTML": True,
-      "pointFormat":"<b>{point.name}:</b> {point.value}m CO<sub>2</sub>"
+      "pointFormat":"<b>{point.name}:</b> {point.value} estudiantes"
    },
    "plotOptions":{
       "packedbubble":{
