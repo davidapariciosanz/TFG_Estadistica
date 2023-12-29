@@ -54,25 +54,25 @@ for degree in degrees:
 st.write('Lista de diccionarios generada:', series_dict)
 
 
-aux = st.selectbox('Select an option:', [0, 1])
+# aux = st.selectbox('Select an option:', [0, 1])
 
-if aux == 0:
-    series_dict = [
-        {"type": "spline",
-         "name": 'Grado en Administración y Dirección de Empresas',
-         "data": [65., 322., 330., 332., 360., 346.]},
+# if aux == 0:
+#     series_dict = [
+#         {"type": "spline",
+#          "name": 'Grado en Administración y Dirección de Empresas',
+#          "data": [65., 322., 330., 332., 360., 346.]},
 
-        {"type": "spline",
-         "name": 'Grado en Pruebaa',
-         "data": [15., 32., 370., 32., 30., 46.]}
-    ]
+#         {"type": "spline",
+#          "name": 'Grado en Pruebaa',
+#          "data": [15., 32., 370., 32., 30., 46.]}
+#     ]
 
-else:
-    series_dict = [
-        {"type": "spline",
-         "name": 'Grado en Administración y Dirección de Empresas',
-         "data": [65., 322., 330., 332., 360., 346.]}
-    ]
+# else:
+#     series_dict = [
+#         {"type": "spline",
+#          "name": 'Grado en Administración y Dirección de Empresas',
+#          "data": [65., 322., 330., 332., 360., 346.]}
+#     ]
 
 as_str = {
     "chart": {
