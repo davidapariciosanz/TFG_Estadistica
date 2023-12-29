@@ -47,10 +47,7 @@ for degree in degrees:
     }
     
     series_dict.append(serie)
-
-# Mostrar la lista de diccionarios generada
-st.write('Lista de diccionarios generada:', series_dict)
-
+    
 as_str = {
     "chart": {
         "type": "spline"
